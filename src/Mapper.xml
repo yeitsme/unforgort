@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace：命名空间，指定接口的完全限定名字-->
+<mapper namespace="cn.itcast.service.OneToOne">
+    <!--card映射-->
+    <resultMap id="cardMap" type="Card" autoMapping="true">
+        <id column="id" property="id"/>
+        <result column="number" property="number"/>
+    </resultMap>
+    <!--person映射-->
+    <resultMap id="personMap" type="Person" autoMapping="true">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
+    </resultMap>
+    <!--两表关系映射-->
+    <resultMap id="PersonAndCard" type="Person" extends="personMap" autoMapping="true">
+        <collection property="cards" resultMap="cardMap"/>
+    </resultMap>
+    <!--
+    id：表示接口中方法名
+    resultType：表示方法返回的数据类型，如果返回的是集合，这里指定集合中每个元素类型
+    select标签标签体就是SQL语句
+    -->
+
+    <select id="findOne" resultMap="personMap" parameterType="int">
+     select p.`id`,p.`NAME`,p.`age`,c.`id`,c.`number` from person p inner join card c on p.id=c.pid where p.id=#{id}
+    </select>
+</mapper>

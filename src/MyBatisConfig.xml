@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--MyBatis的DTD约束-->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!--configuration 核心根标签-->
+<configuration>
+    <!--加载配置文件信息jabc.properties-->
+    <properties resource="jdbc.properties"/>
+    <settings>
+        <!--关于日志的提示信息-->
+        <setting name="logImpl" value="log4j"/>
+    </settings>
+
+    <typeAliases>
+        <!--只有一个操作实体类,获取全限定,名,起这个份类的对象作为别名-->
+        <!--<typeAlias type="cn.itcast.entity.Student" alias="student"/>-->
+       <package name="cn.itcast.entity"/><!--&lt;!&ndash;有多个实体类操作对象&ndash;&gt;-->
+    </typeAliases>
+    <!--分页助手插件:注意在核心配置文件中,只可以在别名后面-->
+    <!--<plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>-->
+
+    <environments default="mysql"><!--配置数据库的环境-->
+        <environment id="mysql">
+            <transactionManager type="JDBC"/><!--事务管理方式-->
+            <dataSource type="POOLED"><!--数据源-->
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+<mappers>
+    <mapper resource="Mapper.xml"/>
+</mappers>
+</configuration>
