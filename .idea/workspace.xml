@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4d07373e-be1a-4af9-8c46-c6aeb6f670c2" name="Default Changelist" comment="" />
+    <list default="true" id="4d07373e-be1a-4af9-8c46-c6aeb6f670c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/cn/itcast/entity/Student.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602513798656</updated>
-      <workItem from="1602513799882" duration="1032000" />
+      <workItem from="1602513799882" duration="1389000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1602513984462</created>
@@ -100,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602514830292</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="COMMIT提交后还要push">
+      <created>1602515029199</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602515029199</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,7 +118,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试提交" />
     <MESSAGE value="增加内容提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加内容提交" />
+    <MESSAGE value="COMMIT提交后还要push" />
+    <option name="LAST_COMMIT_MESSAGE" value="COMMIT提交后还要push" />
   </component>
   <component name="WindowStateProjectService">
     <state x="367" y="0" key="CommitChangelistDialog2" timestamp="1602514829610">
